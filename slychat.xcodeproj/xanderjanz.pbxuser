@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* slychatAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {591, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 480}";
+		};
+	};
+	1D3623250D0F684500981E51 /* slychatAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {591, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 619}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* slychat */ = {
+		activeExec = 0;
+		executables = (
+			ACF65BC118DF8815008B58E2 /* slychat */,
+		);
+	};
+	2899E5210DE3E06400AC0155 /* slychatViewController.nib */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1716, 619}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 3408}";
+		};
+	};
+	28AD733E0D9D9553002E5188 /* MainWindow.nib */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1068, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2056}";
+		};
+	};
+	28D7ACF60DDB3853001CB0EB /* slychatViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {594, 642}}";
+			sepNavSelRange = "{859, 0}";
+			sepNavVisRange = "{0, 867}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* slychatViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {612, 3612}}";
+			sepNavSelRange = "{1209, 0}";
+			sepNavVisRange = "{6097, 1044}";
+			sepNavWindowFrame = "{{15, 399}, {750, 774}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = ACF65BC118DF8815008B58E2 /* slychat */;
+		activeSDKPreference = iphonesimulator3.1.2;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* slychat */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* slychat */,
+		);
+		breakpoints = (
+			ACF65C4E18DF91EC008B58E2 /* slychatViewController.m:222 */,
+		);
+		codeSenseManager = ACF65BCE18DF881A008B58E2 /* Code sense */;
+		executables = (
+			ACF65BC118DF8815008B58E2 /* slychat */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					238,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					339.921875,
+					278.20849609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					316,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					428,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					368,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					404,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					388,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 417302549;
+			PBXWorkspaceStateSaveDate = 417302549;
+		};
+		perUserProjectItems = {
+			ACF65C4F18DF91EF008B58E2 /* PlistBookmark */ = ACF65C4F18DF91EF008B58E2 /* PlistBookmark */;
+			ACF65C5418DF91EF008B58E2 /* PBXTextBookmark */ = ACF65C5418DF91EF008B58E2 /* PBXTextBookmark */;
+			ACF65C5518DF91EF008B58E2 /* PBXTextBookmark */ = ACF65C5518DF91EF008B58E2 /* PBXTextBookmark */;
+			ACF65C5618DF91EF008B58E2 /* PlistBookmark */ = ACF65C5618DF91EF008B58E2 /* PlistBookmark */;
+			ACF65C5818DF91EF008B58E2 /* PBXTextBookmark */ = ACF65C5818DF91EF008B58E2 /* PBXTextBookmark */;
+			ACF65C5918DF91EF008B58E2 /* PBXTextBookmark */ = ACF65C5918DF91EF008B58E2 /* PBXTextBookmark */;
+			ACF65C5A18DF91EF008B58E2 /* PBXTextBookmark */ = ACF65C5A18DF91EF008B58E2 /* PBXTextBookmark */;
+			ACF65C5B18DF91EF008B58E2 /* PlistBookmark */ = ACF65C5B18DF91EF008B58E2 /* PlistBookmark */;
+			ACF65C8A18DF9446008B58E2 /* PBXTextBookmark */ = ACF65C8A18DF9446008B58E2 /* PBXTextBookmark */;
+			ACF65CDF18DF9512008B58E2 /* PlistBookmark */ = ACF65CDF18DF9512008B58E2 /* PlistBookmark */;
+			ACF65CE218DF9512008B58E2 /* PlistBookmark */ = ACF65CE218DF9512008B58E2 /* PlistBookmark */;
+			ACF65CE318DF9512008B58E2 /* PBXTextBookmark */ = ACF65CE318DF9512008B58E2 /* PBXTextBookmark */;
+			ACF65CEC18DF9587008B58E2 /* PBXTextBookmark */ = ACF65CEC18DF9587008B58E2 /* PBXTextBookmark */;
+			ACF65CEE18DF9587008B58E2 /* PBXTextBookmark */ = ACF65CEE18DF9587008B58E2 /* PBXTextBookmark */;
+			ACF65CEF18DF9587008B58E2 /* PBXTextBookmark */ = ACF65CEF18DF9587008B58E2 /* PBXTextBookmark */;
+			ACF65CF018DF9587008B58E2 /* PBXTextBookmark */ = ACF65CF018DF9587008B58E2 /* PBXTextBookmark */;
+			ACF65D0618DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0618DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D0718DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0718DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D0818DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0818DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D0918DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0918DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D0A18DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0A18DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D0C18DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0C18DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D0D18DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0D18DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D0E18DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0E18DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D0F18DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D0F18DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D1018DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D1018DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D1118DF97FF008B58E2 /* PBXTextBookmark */ = ACF65D1118DF97FF008B58E2 /* PBXTextBookmark */;
+			ACF65D2918DF9881008B58E2 /* PBXTextBookmark */ = ACF65D2918DF9881008B58E2 /* PBXTextBookmark */;
+			ACF65D2A18DF9881008B58E2 /* PBXTextBookmark */ = ACF65D2A18DF9881008B58E2 /* PBXTextBookmark */;
+		};
+		sourceControlManager = ACF65BCD18DF881A008B58E2 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {591, 642}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 362}";
+		};
+	};
+	8D1107310486CEB800E47090 /* slychat-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{38, 378}, {750, 774}}";
+		};
+	};
+	ACF65BC118DF8815008B58E2 /* slychat */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = slychat;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+	};
+	ACF65BCD18DF881A008B58E2 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	ACF65BCE18DF881A008B58E2 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	ACF65C4E18DF91EC008B58E2 /* slychatViewController.m:222 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 28D7ACF70DDB3853001CB0EB /* slychatViewController.m */;
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 222;
+		modificationTime = 417305068.297981;
+		state = 1;
+	};
+	ACF65C4F18DF91EF008B58E2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = ACF65C5018DF91EF008B58E2 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			PreferenceSpecifiers,
+			0,
+			IsSecure,
+		);
+		name = /Users/xanderjanz/slychat/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	ACF65C5018DF91EF008B58E2 /* Root.plist */ = {
+		isa = PBXFileReference;
+		name = Root.plist;
+		path = /Users/xanderjanz/slychat/Settings.bundle/Root.plist;
+		sourceTree = "<absolute>";
+	};
+	ACF65C5418DF91EF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* slychatViewController.h */;
+		name = "slychatViewController.h: 37";
+		rLen = 0;
+		rLoc = 859;
+		rType = 0;
+		vrLen = 378;
+		vrLoc = 489;
+	};
+	ACF65C5518DF91EF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* slychatViewController.m */;
+		name = "slychatViewController.m: 231";
+		rLen = 0;
+		rLoc = 7135;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 5529;
+	};
+	ACF65C5618DF91EF008B58E2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = ACF65C5718DF91EF008B58E2 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			PreferenceSpecifiers,
+			0,
+			IsSecure,
+		);
+		name = /Users/xanderjanz/slychat/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	ACF65C5718DF91EF008B58E2 /* Root.plist */ = {
+		isa = PBXFileReference;
+		name = Root.plist;
+		path = /Users/xanderjanz/slychat/Settings.bundle/Root.plist;
+		sourceTree = "<absolute>";
+	};
+	ACF65C5818DF91EF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* slychatViewController.m */;
+		name = "slychatViewController.m: 271";
+		rLen = 0;
+		rLoc = 7135;
+		rType = 0;
+		vrLen = 1394;
+		vrLoc = 4897;
+	};
+	ACF65C5918DF91EF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* slychatViewController.h */;
+		name = "slychatViewController.h: 37";
+		rLen = 0;
+		rLoc = 859;
+		rType = 0;
+		vrLen = 867;
+		vrLoc = 0;
+	};
+	ACF65C5A18DF91EF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* slychatViewController.m */;
+		name = "slychatViewController.m: 271";
+		rLen = 0;
+		rLoc = 7135;
+		rType = 0;
+		vrLen = 1411;
+		vrLoc = 6060;
+	};
+	ACF65C5B18DF91EF008B58E2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* slychat-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/xanderjanz/slychat/slychat-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	ACF65C8A18DF9446008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* slychatViewController.m */;
+		name = "slychatViewController.m: 49";
+		rLen = 0;
+		rLoc = 1209;
+		rType = 0;
+		vrLen = 1043;
+		vrLoc = 6098;
+	};
+	ACF65CDF18DF9512008B58E2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* slychat-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/xanderjanz/slychat/slychat-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	ACF65CE218DF9512008B58E2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* slychat-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/xanderjanz/slychat/slychat-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	ACF65CE318DF9512008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* slychatAppDelegate.m */;
+		name = "slychatAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 619;
+		vrLoc = 0;
+	};
+	ACF65CEC18DF9587008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* slychatAppDelegate.h */;
+		name = "slychatAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 480;
+		vrLoc = 0;
+	};
+	ACF65CEE18DF9587008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 362;
+		vrLoc = 0;
+	};
+	ACF65CEF18DF9587008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* slychatViewController.h */;
+		name = "slychatViewController.h: 37";
+		rLen = 0;
+		rLoc = 859;
+		rType = 0;
+		vrLen = 867;
+		vrLoc = 0;
+	};
+	ACF65CF018DF9587008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* slychatAppDelegate.h */;
+		name = "slychatAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 480;
+		vrLoc = 0;
+	};
+	ACF65D0618DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* slychatViewController.h */;
+		name = "slychatViewController.h: 37";
+		rLen = 0;
+		rLoc = 859;
+		rType = 0;
+		vrLen = 867;
+		vrLoc = 0;
+	};
+	ACF65D0718DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* slychatAppDelegate.m */;
+		name = "slychatAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 619;
+		vrLoc = 0;
+	};
+	ACF65D0818DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* slychatViewController.m */;
+		name = "slychatViewController.m: 49";
+		rLen = 0;
+		rLoc = 1209;
+		rType = 0;
+		vrLen = 1044;
+		vrLoc = 6097;
+	};
+	ACF65D0918DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 362;
+		vrLoc = 0;
+	};
+	ACF65D0A18DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28AD733E0D9D9553002E5188 /* MainWindow.nib */;
+		name = "MainWindow.nib: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2056;
+		vrLoc = 0;
+	};
+	ACF65D0C18DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* slychatViewController.h */;
+		name = "slychatViewController.h: 37";
+		rLen = 0;
+		rLoc = 859;
+		rType = 0;
+		vrLen = 867;
+		vrLoc = 0;
+	};
+	ACF65D0D18DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* slychatAppDelegate.m */;
+		name = "slychatAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 619;
+		vrLoc = 0;
+	};
+	ACF65D0E18DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* slychatViewController.m */;
+		name = "slychatViewController.m: 49";
+		rLen = 0;
+		rLoc = 1209;
+		rType = 0;
+		vrLen = 1044;
+		vrLoc = 6097;
+	};
+	ACF65D0F18DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 362;
+		vrLoc = 0;
+	};
+	ACF65D1018DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2899E5210DE3E06400AC0155 /* slychatViewController.nib */;
+		name = "slychatViewController.nib: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3408;
+		vrLoc = 0;
+	};
+	ACF65D1118DF97FF008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28AD733E0D9D9553002E5188 /* MainWindow.nib */;
+		name = "MainWindow.nib: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2056;
+		vrLoc = 0;
+	};
+	ACF65D2918DF9881008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2899E5210DE3E06400AC0155 /* slychatViewController.nib */;
+		name = "slychatViewController.nib: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3408;
+		vrLoc = 0;
+	};
+	ACF65D2A18DF9881008B58E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2899E5210DE3E06400AC0155 /* slychatViewController.nib */;
+		name = "slychatViewController.nib: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3408;
+		vrLoc = 0;
+	};
+}

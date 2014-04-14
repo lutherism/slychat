@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* slychatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* slychatAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28D7ACF80DDB3853001CB0EB /* slychatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* slychatViewController.m */; };
+		AC009A0D18F4920C0028DDE1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF288A118F40A24004E5C9E /* CoreData.framework */; };
+		AC009A1318F50C180028DDE1 /* AliasInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC009A1218F50C180028DDE1 /* AliasInfoTableViewController.m */; };
+		AC009A1518F5141A0028DDE1 /* Slychat_Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A1418F5141A0028DDE1 /* Slychat_Splash.png */; };
+		AC009A1918F517C70028DDE1 /* slychat_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A1818F517C70028DDE1 /* slychat_icon.png */; };
+		AC009A7C18F6135C0028DDE1 /* NSBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = AC009A7218F6135C0028DDE1 /* NSBubbleData.m */; };
+		AC009A7D18F6135C0028DDE1 /* UIBubbleHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC009A7418F6135C0028DDE1 /* UIBubbleHeaderTableViewCell.m */; };
+		AC009A7E18F6135C0028DDE1 /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC009A7618F6135C0028DDE1 /* UIBubbleTableView.m */; };
+		AC009A7F18F6135C0028DDE1 /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC009A7818F6135C0028DDE1 /* UIBubbleTableViewCell.m */; };
+		AC009A8018F6135C0028DDE1 /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC009A7B18F6135C0028DDE1 /* UIBubbleTypingTableViewCell.m */; };
+		AC009A8518F617940028DDE1 /* SlychaterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC009A8418F617940028DDE1 /* SlychaterViewController.m */; };
+		AC009A9118F61A180028DDE1 /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8718F61A180028DDE1 /* bubbleMine.png */; };
+		AC009A9218F61A180028DDE1 /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8818F61A180028DDE1 /* bubbleMine@2x.png */; };
+		AC009A9318F61A180028DDE1 /* bubbleSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8918F61A180028DDE1 /* bubbleSomeone.png */; };
+		AC009A9418F61A180028DDE1 /* bubbleSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8A18F61A180028DDE1 /* bubbleSomeone@2x.png */; };
+		AC009A9518F61A180028DDE1 /* missingAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8B18F61A180028DDE1 /* missingAvatar.png */; };
+		AC009A9618F61A180028DDE1 /* missingAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8C18F61A180028DDE1 /* missingAvatar@2x.png */; };
+		AC009A9718F61A180028DDE1 /* typingMine.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8D18F61A180028DDE1 /* typingMine.png */; };
+		AC009A9818F61A180028DDE1 /* typingMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8E18F61A180028DDE1 /* typingMine@2x.png */; };
+		AC009A9918F61A180028DDE1 /* typingSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A8F18F61A180028DDE1 /* typingSomeone.png */; };
+		AC009A9A18F61A180028DDE1 /* typingSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC009A9018F61A180028DDE1 /* typingSomeone@2x.png */; };
+		AC009AA218F74C5D0028DDE1 /* aliasdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC009AA118F74C5D0028DDE1 /* aliasdata.plist */; };
+		AC26659218F91941002EB43A /* checkForRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26659118F91941002EB43A /* checkForRequests.m */; };
+		AC26659818F9ED82002EB43A /* MessageTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26659718F9ED82002EB43A /* MessageTimer.m */; };
+		AC26659B18FA05ED002EB43A /* SlyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26659A18FA05ED002EB43A /* SlyAccountViewController.m */; };
+		AC26659E18FA0834002EB43A /* SlyAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26659D18FA0834002EB43A /* SlyAccount.m */; };
+		AC2665A118FA10F8002EB43A /* SlyDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2665A018FA10F8002EB43A /* SlyDatabase.m */; };
+		AC26663518FBB2EB002EB43A /* MessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26663418FBB2EB002EB43A /* MessageManager.m */; };
+		AC26663818FBB347002EB43A /* MessageCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26663718FBB347002EB43A /* MessageCommunicator.m */; };
+		AC26663B18FBB7C7002EB43A /* MessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26663A18FBB7C7002EB43A /* MessageBuilder.m */; };
+		AC26663D18FBC459002EB43A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC26663C18FBC459002EB43A /* Security.framework */; };
+		AC26664018FBC4FE002EB43A /* KeyChainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26663F18FBC4FE002EB43A /* KeyChainItemWrapper.m */; };
+		AC37E35B18F33A1800C586B7 /* slychat_names_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AC37E35A18F33A1800C586B7 /* slychat_names_icon.png */; };
+		AC37E37418F34EE300C586B7 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E37318F34EE300C586B7 /* ContactTableViewController.m */; };
+		AC37E37718F3503B00C586B7 /* NewAliasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E37618F3503B00C586B7 /* NewAliasViewController.m */; };
+		AC37E37918F3575E00C586B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC37E37818F3575E00C586B7 /* Default-568h@2x.png */; };
+		AC37E37C18F3584600C586B7 /* AliasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E37B18F3584600C586B7 /* AliasesViewController.m */; };
+		ACBF0C3218F3ED780089BBCA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBF0C3118F3ED780089BBCA /* Storyboard.storyboard */; };
+		ACF2889418F4016A004E5C9E /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF2889318F4016A004E5C9E /* NewContactViewController.m */; };
+		ACF288B318F48F80004E5C9E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACF288B118F48F80004E5C9E /* Model.xcdatamodeld */; };
+		ACF288B618F4914F004E5C9E /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF288B518F4914F004E5C9E /* Contact.m */; };
+		ACF288B918F4914F004E5C9E /* Alias.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF288B818F4914F004E5C9E /* Alias.m */; };
+		ACF288BC18F4914F004E5C9E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF288BB18F4914F004E5C9E /* Message.m */; };
+		ACF288BF18F4914F004E5C9E /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF288BE18F4914F004E5C9E /* Conversation.m */; };
+		ACF65C2718DF8CAC008B58E2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACF65C2618DF8CAC008B58E2 /* Settings.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* slychatAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slychatAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* slychatAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slychatAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* slychat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slychat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28D7ACF60DDB3853001CB0EB /* slychatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slychatViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* slychatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slychatViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* slychat_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slychat_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* slychat-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "slychat-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AC009A1118F50C180028DDE1 /* AliasInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliasInfoTableViewController.h; sourceTree = "<group>"; };
+		AC009A1218F50C180028DDE1 /* AliasInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliasInfoTableViewController.m; sourceTree = "<group>"; };
+		AC009A1418F5141A0028DDE1 /* Slychat_Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slychat_Splash.png; path = ../Desktop/slychat/Slychat_Splash.png; sourceTree = "<group>"; };
+		AC009A1818F517C70028DDE1 /* slychat_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slychat_icon.png; path = ../Desktop/slychat/slychat_icon.png; sourceTree = "<group>"; };
+		AC009A7118F6135C0028DDE1 /* NSBubbleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSBubbleData.h; path = ../../UIBubbleTableView/src/NSBubbleData.h; sourceTree = "<group>"; };
+		AC009A7218F6135C0028DDE1 /* NSBubbleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSBubbleData.m; path = ../../UIBubbleTableView/src/NSBubbleData.m; sourceTree = "<group>"; };
+		AC009A7318F6135C0028DDE1 /* UIBubbleHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleHeaderTableViewCell.h; path = ../../UIBubbleTableView/src/UIBubbleHeaderTableViewCell.h; sourceTree = "<group>"; };
+		AC009A7418F6135C0028DDE1 /* UIBubbleHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBubbleHeaderTableViewCell.m; path = ../../UIBubbleTableView/src/UIBubbleHeaderTableViewCell.m; sourceTree = "<group>"; };
+		AC009A7518F6135C0028DDE1 /* UIBubbleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleTableView.h; path = ../../UIBubbleTableView/src/UIBubbleTableView.h; sourceTree = "<group>"; };
+		AC009A7618F6135C0028DDE1 /* UIBubbleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBubbleTableView.m; path = ../../UIBubbleTableView/src/UIBubbleTableView.m; sourceTree = "<group>"; };
+		AC009A7718F6135C0028DDE1 /* UIBubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleTableViewCell.h; path = ../../UIBubbleTableView/src/UIBubbleTableViewCell.h; sourceTree = "<group>"; };
+		AC009A7818F6135C0028DDE1 /* UIBubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBubbleTableViewCell.m; path = ../../UIBubbleTableView/src/UIBubbleTableViewCell.m; sourceTree = "<group>"; };
+		AC009A7918F6135C0028DDE1 /* UIBubbleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleTableViewDataSource.h; path = ../../UIBubbleTableView/src/UIBubbleTableViewDataSource.h; sourceTree = "<group>"; };
+		AC009A7A18F6135C0028DDE1 /* UIBubbleTypingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBubbleTypingTableViewCell.h; path = ../../UIBubbleTableView/src/UIBubbleTypingTableViewCell.h; sourceTree = "<group>"; };
+		AC009A7B18F6135C0028DDE1 /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBubbleTypingTableViewCell.m; path = ../../UIBubbleTableView/src/UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
+		AC009A8318F617940028DDE1 /* SlychaterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlychaterViewController.h; sourceTree = "<group>"; };
+		AC009A8418F617940028DDE1 /* SlychaterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlychaterViewController.m; sourceTree = "<group>"; };
+		AC009A8718F61A180028DDE1 /* bubbleMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleMine.png; sourceTree = "<group>"; };
+		AC009A8818F61A180028DDE1 /* bubbleMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleMine@2x.png"; sourceTree = "<group>"; };
+		AC009A8918F61A180028DDE1 /* bubbleSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSomeone.png; sourceTree = "<group>"; };
+		AC009A8A18F61A180028DDE1 /* bubbleSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleSomeone@2x.png"; sourceTree = "<group>"; };
+		AC009A8B18F61A180028DDE1 /* missingAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missingAvatar.png; sourceTree = "<group>"; };
+		AC009A8C18F61A180028DDE1 /* missingAvatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missingAvatar@2x.png"; sourceTree = "<group>"; };
+		AC009A8D18F61A180028DDE1 /* typingMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingMine.png; sourceTree = "<group>"; };
+		AC009A8E18F61A180028DDE1 /* typingMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingMine@2x.png"; sourceTree = "<group>"; };
+		AC009A8F18F61A180028DDE1 /* typingSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingSomeone.png; sourceTree = "<group>"; };
+		AC009A9018F61A180028DDE1 /* typingSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingSomeone@2x.png"; sourceTree = "<group>"; };
+		AC009AA118F74C5D0028DDE1 /* aliasdata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = aliasdata.plist; path = Classes/aliasdata.plist; sourceTree = "<group>"; };
+		AC26659018F91941002EB43A /* checkForRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkForRequests.h; sourceTree = "<group>"; };
+		AC26659118F91941002EB43A /* checkForRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkForRequests.m; sourceTree = "<group>"; };
+		AC26659618F9ED82002EB43A /* MessageTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTimer.h; sourceTree = "<group>"; };
+		AC26659718F9ED82002EB43A /* MessageTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTimer.m; sourceTree = "<group>"; };
+		AC26659918FA05ED002EB43A /* SlyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlyAccountViewController.h; sourceTree = "<group>"; };
+		AC26659A18FA05ED002EB43A /* SlyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlyAccountViewController.m; sourceTree = "<group>"; };
+		AC26659C18FA0834002EB43A /* SlyAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlyAccount.h; sourceTree = "<group>"; };
+		AC26659D18FA0834002EB43A /* SlyAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlyAccount.m; sourceTree = "<group>"; };
+		AC26659F18FA10F8002EB43A /* SlyDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlyDatabase.h; path = Classes/DataManagers/SlyDatabase.h; sourceTree = "<group>"; };
+		AC2665A018FA10F8002EB43A /* SlyDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlyDatabase.m; path = Classes/DataManagers/SlyDatabase.m; sourceTree = "<group>"; };
+		AC26663118FBB1DD002EB43A /* MessageManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageManagerDelegate.h; sourceTree = "<group>"; };
+		AC26663218FBB28E002EB43A /* MessageCommunicatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCommunicatorDelegate.h; sourceTree = "<group>"; };
+		AC26663318FBB2EB002EB43A /* MessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageManager.h; sourceTree = "<group>"; };
+		AC26663418FBB2EB002EB43A /* MessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageManager.m; sourceTree = "<group>"; };
+		AC26663618FBB347002EB43A /* MessageCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCommunicator.h; sourceTree = "<group>"; };
+		AC26663718FBB347002EB43A /* MessageCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCommunicator.m; sourceTree = "<group>"; };
+		AC26663918FBB7C7002EB43A /* MessageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBuilder.h; sourceTree = "<group>"; };
+		AC26663A18FBB7C7002EB43A /* MessageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBuilder.m; sourceTree = "<group>"; };
+		AC26663C18FBC459002EB43A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AC26663E18FBC4FE002EB43A /* KeyChainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyChainItemWrapper.h; path = Classes/DataManagers/KeyChainItemWrapper.h; sourceTree = "<group>"; };
+		AC26663F18FBC4FE002EB43A /* KeyChainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyChainItemWrapper.m; path = Classes/DataManagers/KeyChainItemWrapper.m; sourceTree = "<group>"; };
+		AC37E35A18F33A1800C586B7 /* slychat_names_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slychat_names_icon.png; path = ../Desktop/slychat/slychat_names_icon.png; sourceTree = "<group>"; };
+		AC37E37218F34EE300C586B7 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
+		AC37E37318F34EE300C586B7 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		AC37E37518F3503B00C586B7 /* NewAliasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAliasViewController.h; sourceTree = "<group>"; };
+		AC37E37618F3503B00C586B7 /* NewAliasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAliasViewController.m; sourceTree = "<group>"; };
+		AC37E37818F3575E00C586B7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AC37E37A18F3584600C586B7 /* AliasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliasesViewController.h; sourceTree = "<group>"; };
+		AC37E37B18F3584600C586B7 /* AliasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliasesViewController.m; sourceTree = "<group>"; };
+		ACBF0C3118F3ED780089BBCA /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		ACF2889218F4016A004E5C9E /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewContactViewController.h; sourceTree = "<group>"; };
+		ACF2889318F4016A004E5C9E /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewContactViewController.m; sourceTree = "<group>"; };
+		ACF288A118F40A24004E5C9E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ACF288B218F48F80004E5C9E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		ACF288B418F4914F004E5C9E /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = Classes/DataManagers/Contact.h; sourceTree = "<group>"; };
+		ACF288B518F4914F004E5C9E /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = Classes/DataManagers/Contact.m; sourceTree = "<group>"; };
+		ACF288B718F4914F004E5C9E /* Alias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alias.h; path = Classes/DataManagers/Alias.h; sourceTree = "<group>"; };
+		ACF288B818F4914F004E5C9E /* Alias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alias.m; path = Classes/DataManagers/Alias.m; sourceTree = "<group>"; };
+		ACF288BA18F4914F004E5C9E /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = Classes/DataManagers/Message.h; sourceTree = "<group>"; };
+		ACF288BB18F4914F004E5C9E /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Classes/DataManagers/Message.m; sourceTree = "<group>"; };
+		ACF288BD18F4914F004E5C9E /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conversation.h; path = Classes/DataManagers/Conversation.h; sourceTree = "<group>"; };
+		ACF288BE18F4914F004E5C9E /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conversation.m; path = Classes/DataManagers/Conversation.m; sourceTree = "<group>"; };
+		ACF65C2618DF8CAC008B58E2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC26663D18FBC459002EB43A /* Security.framework in Frameworks */,
+				AC009A0D18F4920C0028DDE1 /* CoreData.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AC26659918FA05ED002EB43A /* SlyAccountViewController.h */,
+				AC26659A18FA05ED002EB43A /* SlyAccountViewController.m */,
+				AC009A1118F50C180028DDE1 /* AliasInfoTableViewController.h */,
+				AC009A1218F50C180028DDE1 /* AliasInfoTableViewController.m */,
+				AC37E37A18F3584600C586B7 /* AliasesViewController.h */,
+				AC37E37B18F3584600C586B7 /* AliasesViewController.m */,
+				ACF2889218F4016A004E5C9E /* NewContactViewController.h */,
+				ACF2889318F4016A004E5C9E /* NewContactViewController.m */,
+				AC37E37518F3503B00C586B7 /* NewAliasViewController.h */,
+				AC37E37618F3503B00C586B7 /* NewAliasViewController.m */,
+				AC37E37218F34EE300C586B7 /* ContactTableViewController.h */,
+				AC37E37318F34EE300C586B7 /* ContactTableViewController.m */,
+				AC26659018F91941002EB43A /* checkForRequests.h */,
+				AC26659118F91941002EB43A /* checkForRequests.m */,
+				1D3623240D0F684500981E51 /* slychatAppDelegate.h */,
+				AC26663118FBB1DD002EB43A /* MessageManagerDelegate.h */,
+				AC26663218FBB28E002EB43A /* MessageCommunicatorDelegate.h */,
+				AC26663318FBB2EB002EB43A /* MessageManager.h */,
+				AC26663418FBB2EB002EB43A /* MessageManager.m */,
+				1D3623250D0F684500981E51 /* slychatAppDelegate.m */,
+				AC009A7118F6135C0028DDE1 /* NSBubbleData.h */,
+				AC009A7218F6135C0028DDE1 /* NSBubbleData.m */,
+				AC009A7318F6135C0028DDE1 /* UIBubbleHeaderTableViewCell.h */,
+				AC009A7418F6135C0028DDE1 /* UIBubbleHeaderTableViewCell.m */,
+				AC26663618FBB347002EB43A /* MessageCommunicator.h */,
+				AC26663718FBB347002EB43A /* MessageCommunicator.m */,
+				AC009A7518F6135C0028DDE1 /* UIBubbleTableView.h */,
+				AC26663918FBB7C7002EB43A /* MessageBuilder.h */,
+				AC26663A18FBB7C7002EB43A /* MessageBuilder.m */,
+				AC009A7618F6135C0028DDE1 /* UIBubbleTableView.m */,
+				AC009A7718F6135C0028DDE1 /* UIBubbleTableViewCell.h */,
+				AC009A7818F6135C0028DDE1 /* UIBubbleTableViewCell.m */,
+				AC009A7918F6135C0028DDE1 /* UIBubbleTableViewDataSource.h */,
+				AC26659618F9ED82002EB43A /* MessageTimer.h */,
+				AC26659718F9ED82002EB43A /* MessageTimer.m */,
+				AC009A7A18F6135C0028DDE1 /* UIBubbleTypingTableViewCell.h */,
+				AC009A8318F617940028DDE1 /* SlychaterViewController.h */,
+				AC009A8618F61A180028DDE1 /* images */,
+				AC009A8418F617940028DDE1 /* SlychaterViewController.m */,
+				AC009A7B18F6135C0028DDE1 /* UIBubbleTypingTableViewCell.m */,
+				28D7ACF60DDB3853001CB0EB /* slychatViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* slychatViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* slychat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				AC37E37818F3575E00C586B7 /* Default-568h@2x.png */,
+				AC009A1418F5141A0028DDE1 /* Slychat_Splash.png */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* slychat_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC009AA118F74C5D0028DDE1 /* aliasdata.plist */,
+				AC009A1818F517C70028DDE1 /* slychat_icon.png */,
+				ACF288B118F48F80004E5C9E /* Model.xcdatamodeld */,
+				ACF288BD18F4914F004E5C9E /* Conversation.h */,
+				ACF288BE18F4914F004E5C9E /* Conversation.m */,
+				ACF288BA18F4914F004E5C9E /* Message.h */,
+				ACF288BB18F4914F004E5C9E /* Message.m */,
+				ACF288B718F4914F004E5C9E /* Alias.h */,
+				AC26659C18FA0834002EB43A /* SlyAccount.h */,
+				AC26659D18FA0834002EB43A /* SlyAccount.m */,
+				AC26663E18FBC4FE002EB43A /* KeyChainItemWrapper.h */,
+				AC26663F18FBC4FE002EB43A /* KeyChainItemWrapper.m */,
+				AC26659F18FA10F8002EB43A /* SlyDatabase.h */,
+				AC2665A018FA10F8002EB43A /* SlyDatabase.m */,
+				ACF288B818F4914F004E5C9E /* Alias.m */,
+				ACF288B418F4914F004E5C9E /* Contact.h */,
+				ACF288B518F4914F004E5C9E /* Contact.m */,
+				ACBF0C3118F3ED780089BBCA /* Storyboard.storyboard */,
+				AC37E35A18F33A1800C586B7 /* slychat_names_icon.png */,
+				8D1107310486CEB800E47090 /* slychat-Info.plist */,
+				ACF65C2618DF8CAC008B58E2 /* Settings.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC26663C18FBC459002EB43A /* Security.framework */,
+				ACF288A118F40A24004E5C9E /* CoreData.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC009A8618F61A180028DDE1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AC009A8718F61A180028DDE1 /* bubbleMine.png */,
+				AC009A8818F61A180028DDE1 /* bubbleMine@2x.png */,
+				AC009A8918F61A180028DDE1 /* bubbleSomeone.png */,
+				AC009A8A18F61A180028DDE1 /* bubbleSomeone@2x.png */,
+				AC009A8B18F61A180028DDE1 /* missingAvatar.png */,
+				AC009A8C18F61A180028DDE1 /* missingAvatar@2x.png */,
+				AC009A8D18F61A180028DDE1 /* typingMine.png */,
+				AC009A8E18F61A180028DDE1 /* typingMine@2x.png */,
+				AC009A8F18F61A180028DDE1 /* typingSomeone.png */,
+				AC009A9018F61A180028DDE1 /* typingSomeone@2x.png */,
+			);
+			name = images;
+			path = ../../UIBubbleTableView/images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* slychat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "slychat" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = slychat;
+			productName = slychat;
+			productReference = 1D6058910D05DD3D006BFB54 /* slychat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "slychat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* slychat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC009A9818F61A180028DDE1 /* typingMine@2x.png in Resources */,
+				AC009A9618F61A180028DDE1 /* missingAvatar@2x.png in Resources */,
+				AC37E37918F3575E00C586B7 /* Default-568h@2x.png in Resources */,
+				AC009A9418F61A180028DDE1 /* bubbleSomeone@2x.png in Resources */,
+				AC009A1518F5141A0028DDE1 /* Slychat_Splash.png in Resources */,
+				AC009A9918F61A180028DDE1 /* typingSomeone.png in Resources */,
+				AC009A9318F61A180028DDE1 /* bubbleSomeone.png in Resources */,
+				ACF65C2718DF8CAC008B58E2 /* Settings.bundle in Resources */,
+				AC009AA218F74C5D0028DDE1 /* aliasdata.plist in Resources */,
+				ACBF0C3218F3ED780089BBCA /* Storyboard.storyboard in Resources */,
+				AC37E35B18F33A1800C586B7 /* slychat_names_icon.png in Resources */,
+				AC009A9118F61A180028DDE1 /* bubbleMine.png in Resources */,
+				AC009A9518F61A180028DDE1 /* missingAvatar.png in Resources */,
+				AC009A9218F61A180028DDE1 /* bubbleMine@2x.png in Resources */,
+				AC009A1918F517C70028DDE1 /* slychat_icon.png in Resources */,
+				AC009A9718F61A180028DDE1 /* typingMine.png in Resources */,
+				AC009A9A18F61A180028DDE1 /* typingSomeone@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF288BF18F4914F004E5C9E /* Conversation.m in Sources */,
+				AC37E37418F34EE300C586B7 /* ContactTableViewController.m in Sources */,
+				AC2665A118FA10F8002EB43A /* SlyDatabase.m in Sources */,
+				AC26663818FBB347002EB43A /* MessageCommunicator.m in Sources */,
+				AC26659218F91941002EB43A /* checkForRequests.m in Sources */,
+				AC26663B18FBB7C7002EB43A /* MessageBuilder.m in Sources */,
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				ACF288B918F4914F004E5C9E /* Alias.m in Sources */,
+				ACF2889418F4016A004E5C9E /* NewContactViewController.m in Sources */,
+				AC009A7F18F6135C0028DDE1 /* UIBubbleTableViewCell.m in Sources */,
+				AC26659B18FA05ED002EB43A /* SlyAccountViewController.m in Sources */,
+				AC26659E18FA0834002EB43A /* SlyAccount.m in Sources */,
+				ACF288B318F48F80004E5C9E /* Model.xcdatamodeld in Sources */,
+				AC37E37718F3503B00C586B7 /* NewAliasViewController.m in Sources */,
+				AC37E37C18F3584600C586B7 /* AliasesViewController.m in Sources */,
+				AC009A7C18F6135C0028DDE1 /* NSBubbleData.m in Sources */,
+				AC26663518FBB2EB002EB43A /* MessageManager.m in Sources */,
+				AC009A7D18F6135C0028DDE1 /* UIBubbleHeaderTableViewCell.m in Sources */,
+				AC009A8518F617940028DDE1 /* SlychaterViewController.m in Sources */,
+				1D3623260D0F684500981E51 /* slychatAppDelegate.m in Sources */,
+				AC009A7E18F6135C0028DDE1 /* UIBubbleTableView.m in Sources */,
+				ACF288B618F4914F004E5C9E /* Contact.m in Sources */,
+				AC009A1318F50C180028DDE1 /* AliasInfoTableViewController.m in Sources */,
+				ACF288BC18F4914F004E5C9E /* Message.m in Sources */,
+				AC009A8018F6135C0028DDE1 /* UIBubbleTypingTableViewCell.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* slychatViewController.m in Sources */,
+				AC26664018FBC4FE002EB43A /* KeyChainItemWrapper.m in Sources */,
+				AC26659818F9ED82002EB43A /* MessageTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = slychat_Prefix.pch;
+				INFOPLIST_FILE = "slychat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = slychat;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = slychat_Prefix.pch;
+				INFOPLIST_FILE = "slychat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = slychat;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "slychat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "slychat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ACF288B118F48F80004E5C9E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ACF288B218F48F80004E5C9E /* Model.xcdatamodel */,
+			);
+			currentVersion = ACF288B218F48F80004E5C9E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

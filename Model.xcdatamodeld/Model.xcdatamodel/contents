@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Alias" representedClassName="Alias" syncable="YES">
+        <attribute name="avail" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="date_created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="contacts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="alias" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="messages" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Message" inverseName="alias" inverseEntity="Message" syncable="YES"/>
+        <relationship name="sly" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SlyAccount" inverseName="aliases" inverseEntity="SlyAccount" syncable="YES"/>
+    </entity>
+    <entity name="Contact" representedClassName="Contact" syncable="YES">
+        <attribute name="date_connected" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="partnername" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="alias" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alias" inverseName="contacts" inverseEntity="Alias" syncable="YES"/>
+        <relationship name="messages" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Message" inverseName="contact" inverseEntity="Message" syncable="YES"/>
+        <relationship name="sly" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SlyAccount" inverseName="contacts" inverseEntity="SlyAccount" syncable="YES"/>
+    </entity>
+    <entity name="Message" representedClassName="Message" syncable="YES">
+        <attribute name="date_sent" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isMedia" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mediaURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="alias" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alias" inverseName="messages" inverseEntity="Alias" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="messages" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="sly" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SlyAccount" inverseName="messages" inverseEntity="SlyAccount" syncable="YES"/>
+    </entity>
+    <entity name="SlyAccount" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="aliases" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alias" inverseName="sly" inverseEntity="Alias" syncable="YES"/>
+        <relationship name="contacts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="sly" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="messages" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Message" inverseName="sly" inverseEntity="Message" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Alias" positionX="-56" positionY="-55" width="128" height="163"/>
+        <element name="Contact" positionX="36" positionY="170" width="128" height="118"/>
+        <element name="Message" positionX="288" positionY="104" width="128" height="148"/>
+        <element name="SlyAccount" positionX="-72" positionY="-207" width="128" height="103"/>
+    </elements>
+</model>
