@@ -70,7 +70,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    listAliases = [[AliasDatabase loadAliases] copy];
+    _sly = [[UIApplication sharedApplication]delegate]
     if([listAliases count]>0)selectedAlias =[listAliases objectAtIndex:0];
     [inputContact becomeFirstResponder];
     // Do any additional setup after loading the view.
