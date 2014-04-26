@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ContactDatabase.h"
 #import "MessageTimer.h"
 
 @interface ContactTableViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate> {
@@ -28,8 +27,9 @@
 @property (nonatomic,retain) UITableView *contactList;
 @property int rowSelected;
 @property (nonatomic,retain)NSMutableArray *contacts;
-@property (nonatomic, retain)MessageTimer *messagChecker;
-@property (nonatomic, retain)SlyAccount sly;
+@property (nonatomic, retain) MessageTimer *messageChecker;
+@property (nonatomic, retain)SlyAccount *sly;
+@property (nonatomic,retain)slychatAppDelegate *appDelegate;
 
 
 

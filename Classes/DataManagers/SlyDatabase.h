@@ -10,9 +10,9 @@
 #import "SlyAccount.h"
 
 @interface SlyDatabase : NSObject
-@property (nonatomic, retain)SlyAccount *myAccount;
+@property (nonatomic, retain) SlyAccount *myAccount;
 
--(BOOL)loadSly;
++(SlyAccount *)loadSly;
 -(void)save;
 +(void)save:(SlyAccount *)sly;
 +(void)deleteDocs;

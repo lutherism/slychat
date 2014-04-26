@@ -1,4 +1,4 @@
-//
+    //
 //  SlychaterViewController.h
 //  slychat
 //
@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "UIBubbleTableViewDataSource.h"
 #import "Contact.h"
-#import "MessageDatabase.h"
 
 @interface SlychaterViewController : UIViewController <UIBubbleTableViewDataSource>{
 
@@ -18,6 +17,7 @@ NSMutableData *receivedData;
 NSTimer *timer;
 }
 
+@property (nonatomic,retain) NSString* contactname;
 @property (nonatomic,retain) Contact* contact;
 
 @end

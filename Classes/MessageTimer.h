@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SlyAccountManagerDelegate.h"
 #import "MessageManagerDelegate.h"
 
 @class SlyAccount;
 @class slychatAppDelegate;
 
-@interface MessageTimer : NSObject <MessageManagerDelegate> {
+@interface MessageTimer : NSObject <SlyAccountManagerDelegate, MessageManagerDelegate> {
     NSTimer *timer;
     int lastMsg;
     
 }
--(id)initWithAccount:(SlyAccount *)sly;
+
 @property (nonatomic,retain) slychatAppDelegate *appDelegate;
-@property (nonatomic,retain) SlyAccount *sly;
 
 @end

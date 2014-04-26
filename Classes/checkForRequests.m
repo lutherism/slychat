@@ -7,7 +7,6 @@
 //
 
 #import "checkForRequests.h"
-#import "ContactDatabase.h"
 
 @implementation checkForRequests
 
@@ -45,7 +44,7 @@
     NSLog(@"selected request");
     NSLog(@"%@",[_contacts description]);
     Contact *c = [_contacts objectAtIndex:indexPath.row];
-    [ContactDatabase save:c];
+    //[ContactDatabase save:c];
     //[requestList cellForRowAtIndexPath:indexPath.row].accessoryType = UITableViewCellAccessoryCheckmark;
     [self acceptRequests:c];
     [_contacts removeObjectAtIndex:indexPath.row];

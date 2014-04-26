@@ -10,7 +10,7 @@
 
 @protocol MessageCommunicatorDelegate <NSObject>
 
--(void)receivedMessageJSON:(NSData *)messageNotation;
+-(void)receivedMessagesJSON:(NSData *)messageNotation;
 -(void)fetchingMessageFailedWithError:(NSError *)error;
 
 @end

@@ -11,6 +11,7 @@
 #import "UIBubbleTableViewDataSource.h"
 #import "NSBubbleData.h"
 #import "ContactTableViewController.h"
+#import "SlyDatabase.h"
 
 
 @interface SlychaterViewController ()
@@ -27,14 +28,13 @@
 
 -(void)dealloc{
     [super dealloc];
-    [_contact release];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     bubbleTable.bubbleDataSource = self;
-    
+    _contact = [[SlyDatabase loadSly]getContactWithName:_contactname];
     // The line below sets the snap interval in seconds. This defines how the bubbles will be grouped in time.
     // Interval of 120 means that if the next messages comes in 2 minutes since the last message, it will be added into the same group.
     // Groups are delimited with header which contains date and time for the first message in the group.
@@ -53,13 +53,14 @@
     //    - NSBubbleTypingTypeNone - no "now typing" bubble
     
     //bubbleTable.typingBubble = NSBubbleTypingTypeSomebody;
-    
+    [self getNewMessages];
     [bubbleTable reloadData];
     
     // Keyboard events
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateView:) name:@"updateRoot" object:nil];
     [self getNewMessages];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
 								[self methodSignatureForSelector: @selector(timerCallback)]];
@@ -72,7 +73,11 @@
     NSLog(@"Timer callback");
     [self getNewMessages];
 }
-
+-(void)updateView:(NSObject *)nill{
+    SlyAccount *sly = [SlyDatabase loadSly];
+    _contact = [sly getContactWithName:[_contact getPartnerName]];
+    [bubbleTable reloadData];
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -132,9 +137,7 @@
 - (IBAction)sayPressed:(id)sender
 {
     bubbleTable.typingBubble = NSBubbleTypingTypeNobody;
-    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
     NSString *url = [NSString stringWithFormat:
                      @"http://slychat.openrobot.net/add.php"];
     
@@ -144,7 +147,7 @@
     [request setHTTPMethod:@"POST"];
     
     NSMutableData *body = [NSMutableData data];
-    NSString *urli = [NSString stringWithFormat:@"user=%@&message=%@&conv=%li",[[_contact getMyAlias]getName],textField.text, [[_contact getChatID]longValue]];
+    NSString *urli = [NSString stringWithFormat:@"user=%@&message=%@&conv=%@",[[_contact getMyAlias]getName],textField.text, [_contact getChatID]];
     [body appendData:[urli dataUsingEncoding:NSUTF8StringEncoding]];
     [request setHTTPBody:body];
     
@@ -167,13 +170,12 @@
     NSLog(@"Get Messages");
     if(bubbleData)[bubbleData release];
     bubbleData = [[NSMutableArray alloc]init];
-    NSArray *messages = [MessageDatabase loadMessages:_contact];
+    NSArray *messages = [_contact getMessages];
     for(Message *m in messages)
     {
-        if([[[m getContact]getName] isEqualToString:[_contact getName]]) [bubbleData addObject:[NSBubbleData dataWithText:[m getText] date:[NSDate dateWithTimeIntervalSinceNow:-300] type:BubbleTypeSomeoneElse]];
+        if([[m getSender] isEqualToString:[_contact getPartnerName]]) [bubbleData addObject:[NSBubbleData dataWithText:[m getText] date:[NSDate dateWithTimeIntervalSinceNow:-300] type:BubbleTypeSomeoneElse]];
         else [bubbleData addObject:[NSBubbleData dataWithText:[m getText] date:[NSDate dateWithTimeIntervalSinceNow:-300] type:BubbleTypeMine]];
     }
-    [messages release];
 }
 /*
 - (void)connection:(NSURLConnection *)connection

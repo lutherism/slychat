@@ -164,7 +164,6 @@ didStartElement:(NSString *)elementName
     [inputAlias release];
     [nonAvailable release];
     [aliasIndicator release];
-    [doneButton release];
     [super dealloc];
 }
 @end

@@ -18,21 +18,21 @@
 @interface Contact : NSObject <NSCopying, NSCoding>
 
 @property (nonatomic,retain) NSString *partner;
-@property (nonatomic, retain) NSDate *date_connected;
+@property (nonatomic, retain) NSString *date;
 @property (nonatomic,retain) Alias *alias;
-@property (nonatomic,retain) NSNumber *chat_id;
+@property (nonatomic,retain) NSString *cid;
 @property (nonatomic,retain) NSMutableArray *messages;
 @property (nonatomic,retain) SlyAccount *sly;
 
-- (id)initwithPartner:(NSString *)name alias:(Alias *)alias chat_id:(NSNumber *)chat_id sly:(SlyAccount *)sly;
-- (id)initwithPartner:(NSString *)name alias:(Alias *)alias date_connected:(NSDate *)date_created chat_id:(NSNumber *)chat_id messages:(NSMutableArray *)messages sly:(SlyAccount *)sly;
+- (id)initwithPartner:(NSString *)name alias:(Alias *)alias chat_id:(NSString *)chat_id sly:(SlyAccount *)sly;
+- (id)initwithPartner:(NSString *)name alias:(Alias *)alias date_connected:(NSString *)date_created chat_id:(NSString *)chat_id messages:(NSMutableArray *)messages sly:(SlyAccount *)sly;
 
 -(NSString *)getPartnerName;
 -(Alias *)getMyAlias;
--(NSNumber *)getChatID;
+-(NSString *)getChatID;
 -(NSMutableArray *)getMessages;
 -(SlyAccount *)getSly;
--(Message *)getMessageByID:(NSNumber *)mid;
+-(Message *)getMessageByID:(NSString *)mid;
 
 -(void)addMessages:(NSArray *)msg;
 

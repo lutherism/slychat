@@ -33,7 +33,7 @@
 - (IBAction)login:(id)sender {
     name =[_accountEditField.text copy];
     pass = [_passwordEditField.text copy];
-    [self makeNewAlias:name pass:pass];
+    [self makeSly:name];
     [_aliasIndicator startAnimating];
 }
 
@@ -43,6 +43,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)makeSly:(NSString *)nameinput
+{
+    [SlyDatabase save:[[SlyAccount alloc]initwithName:nameinput keys:nil]];
+    _messagetimer = [[MessageTimer alloc]init];
+    [self performSegueWithIdentifier: @"login" sender: self];
+}
 
 
 /*
@@ -57,7 +63,7 @@
 */
 
 //Server Request Data
-- (void)makeNewAlias:(NSString *)Alias pass:(NSString *)pass {
+- (void)login:(NSString *)Alias pass:(NSString *)pass {
     NSLog(@"Check for Alias Availability");
     NSMutableString *strApplicationUUID = [[NSMutableString alloc]init];
     NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
@@ -78,60 +84,6 @@
     }
     else
     {
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection
-didReceiveResponse:(NSURLResponse *)response
-{
-    NSLog(@"Response Recieved");
-    [receivedData setLength:0];
-}
-
-- (void)connection:(NSURLConnection *)connection
-	didReceiveData:(NSData *)data
-{
-    NSLog(@"Response Recieved w/Data");
-    [receivedData appendData:data];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    NSLog(@"Got Connection");
-    if (chatParser)
-        [chatParser release];
-	
-    if(receivedData)chatParser = [[NSXMLParser alloc] initWithData:receivedData];
-    else NSLog(@"error: connecitonDidFinishLoading var receivedData");
-    [chatParser setDelegate:self];
-    [chatParser parse];
-	
-    [receivedData release];
-}
-
-- (void)parser:(NSXMLParser *)parser
-didStartElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI
- qualifiedName:(NSString *)qName
-	attributes:(NSDictionary *)attributeDict {
-    if ( [elementName isEqualToString:@"sucess"] ) {
-    }
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    if ( inID ) {
-        [parsing_id appendString:string];
-    }
-    
-}
-
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    if ( [elementName isEqualToString:@"success"] ) {
-        NSLog(@"done conencting");
-        [_aliasIndicator stopAnimating];
-        [SlyDatabase save:[[SlyAccount alloc]initwithName:name]];
-        [self performSegueWithIdentifier: @"login" sender: self];
     }
 }
 

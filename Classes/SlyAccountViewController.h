@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MessageTimer.h"
 
 @interface SlyAccountViewController : UIViewController <NSXMLParserDelegate> {
     NSString *aliasName;
@@ -25,6 +26,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *passwordEditField;
 @property (retain, nonatomic) IBOutlet UITextField *accountLabel;
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *aliasIndicator;
+@property (retain, nonatomic) MessageTimer *messagetimer;
 
 
 @end

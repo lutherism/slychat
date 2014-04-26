@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SlyAccount.h"
+
+@class SlyAccount;
 
 @protocol MessageCommunicatorDelegate;
 
@@ -14,6 +17,6 @@
 
 @property (assign, nonatomic) id<MessageCommunicatorDelegate> delegate;
 
--(void)getMessagesForContact:(NSString *)coordinate;
+-(void)getMessagesSinceID:(NSNumber *)coordinate withSly:(SlyAccount *)sly;
 
 @end

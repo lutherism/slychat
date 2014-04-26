@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Contact.h"
-#import "ContactDatabase.h"
-#import "AliasDatabase.h"
+#import "SlyDatabase.h"
 
 @interface NewContactViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate,NSXMLParserDelegate>{
     IBOutlet UIButton *addContact;
@@ -18,7 +17,6 @@
     IBOutlet UIPickerView *myAliases;
     IBOutlet UIActivityIndicatorView *connectingIndicator;
     IBOutlet UIButton *connectButton;
-    NSXMLParser *chatParser;
     NSMutableData *receivedData;
     NSMutableArray *listAliases;
     Alias *selectedAlias;
@@ -28,7 +26,6 @@
     
 }
 @property (nonatomic,retain) Contact *make_contact;
-@property (nonatomic,retain) SlyAccount *sly;
 -(IBAction)makeConnection;
 
 

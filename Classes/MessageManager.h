@@ -18,6 +18,6 @@
 @property (assign, nonatomic) id<MessageManagerDelegate> delegate;
 @property (nonatomic,retain) SlyAccount *sly;
 
--(void)fetchMessagesForConv:(NSString *)coordinate;
+-(void)fetchMessageSinceID:(NSNumber *)coordinate withSly:(SlyAccount *)sly;
 
 @end

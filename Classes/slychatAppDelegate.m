@@ -8,7 +8,6 @@
 
 #import "slychatAppDelegate.h"
 #import "slychatViewController.h"
-#import "AliasDatabase.h"
 #import "AliasesViewController.h"
 
 @implementation slychatAppDelegate;
@@ -25,12 +24,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _mainData = [[SlyDatabase alloc]init];
-    [_mainData loadSly];
-    _messageChecker = [[MessageTimer alloc]initWithAccount:_mainData.myAccount];
-    BOOL isLoggedIn = ([_mainData.myAccount getName]!=nil);
-    NSString *segueId = isLoggedIn ? @"Main" : @"Login";
-    NSLog(@"%@",segueId);
+    BOOL isLoggedIn = ([SlyDatabase loadSly]);
+    NSString *segueId;
+    if(isLoggedIn){
+        segueId = @"Main";
+        _messagetimer = [[MessageTimer alloc]init];
+    }
+    else{
+        segueId = @"Login";
+    }
      _mainStoryboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     UIViewController *initViewController = [_mainStoryboard instantiateViewControllerWithIdentifier:segueId];
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -41,8 +43,6 @@
 
 - (void)dealloc {
     [_window release];
-    [_mainData release];
-    [_messageChecker release];
     [super dealloc];
 }
 

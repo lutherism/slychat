@@ -50,6 +50,9 @@
 		AC37E37918F3575E00C586B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC37E37818F3575E00C586B7 /* Default-568h@2x.png */; };
 		AC37E37C18F3584600C586B7 /* AliasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E37B18F3584600C586B7 /* AliasesViewController.m */; };
 		ACBF0C3218F3ED780089BBCA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBF0C3118F3ED780089BBCA /* Storyboard.storyboard */; };
+		ACED0B361905F4B700AED9EE /* slyAccountBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ACED0B351905F4B700AED9EE /* slyAccountBuilder.m */; };
+		ACED0B391905F8E600AED9EE /* SlyAccountCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = ACED0B381905F8E600AED9EE /* SlyAccountCommunicator.m */; };
+		ACED0B3C1905F93E00AED9EE /* SlyAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACED0B3B1905F93E00AED9EE /* SlyAccountManager.m */; };
 		ACF2889418F4016A004E5C9E /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF2889318F4016A004E5C9E /* NewContactViewController.m */; };
 		ACF288B318F48F80004E5C9E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACF288B118F48F80004E5C9E /* Model.xcdatamodeld */; };
 		ACF288B618F4914F004E5C9E /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF288B518F4914F004E5C9E /* Contact.m */; };
@@ -129,6 +132,14 @@
 		AC37E37A18F3584600C586B7 /* AliasesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliasesViewController.h; sourceTree = "<group>"; };
 		AC37E37B18F3584600C586B7 /* AliasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliasesViewController.m; sourceTree = "<group>"; };
 		ACBF0C3118F3ED780089BBCA /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		ACED0B341905F4B700AED9EE /* slyAccountBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slyAccountBuilder.h; sourceTree = "<group>"; };
+		ACED0B351905F4B700AED9EE /* slyAccountBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slyAccountBuilder.m; sourceTree = "<group>"; };
+		ACED0B371905F8E600AED9EE /* SlyAccountCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlyAccountCommunicator.h; sourceTree = "<group>"; };
+		ACED0B381905F8E600AED9EE /* SlyAccountCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlyAccountCommunicator.m; sourceTree = "<group>"; };
+		ACED0B3A1905F93E00AED9EE /* SlyAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlyAccountManager.h; sourceTree = "<group>"; };
+		ACED0B3B1905F93E00AED9EE /* SlyAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlyAccountManager.m; sourceTree = "<group>"; };
+		ACED0B3D1905F99A00AED9EE /* SlyAccountCommunicatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlyAccountCommunicatorDelegate.h; sourceTree = "<group>"; };
+		ACED0B3E1905F9BB00AED9EE /* SlyAccountManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlyAccountManagerDelegate.h; sourceTree = "<group>"; };
 		ACF2889218F4016A004E5C9E /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewContactViewController.h; sourceTree = "<group>"; };
 		ACF2889318F4016A004E5C9E /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewContactViewController.m; sourceTree = "<group>"; };
 		ACF288A118F40A24004E5C9E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -192,6 +203,14 @@
 				AC009A7518F6135C0028DDE1 /* UIBubbleTableView.h */,
 				AC26663918FBB7C7002EB43A /* MessageBuilder.h */,
 				AC26663A18FBB7C7002EB43A /* MessageBuilder.m */,
+				ACED0B341905F4B700AED9EE /* slyAccountBuilder.h */,
+				ACED0B351905F4B700AED9EE /* slyAccountBuilder.m */,
+				ACED0B371905F8E600AED9EE /* SlyAccountCommunicator.h */,
+				ACED0B381905F8E600AED9EE /* SlyAccountCommunicator.m */,
+				ACED0B3A1905F93E00AED9EE /* SlyAccountManager.h */,
+				ACED0B3D1905F99A00AED9EE /* SlyAccountCommunicatorDelegate.h */,
+				ACED0B3E1905F9BB00AED9EE /* SlyAccountManagerDelegate.h */,
+				ACED0B3B1905F93E00AED9EE /* SlyAccountManager.m */,
 				AC009A7618F6135C0028DDE1 /* UIBubbleTableView.m */,
 				AC009A7718F6135C0028DDE1 /* UIBubbleTableViewCell.h */,
 				AC009A7818F6135C0028DDE1 /* UIBubbleTableViewCell.m */,
@@ -375,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF288BF18F4914F004E5C9E /* Conversation.m in Sources */,
+				ACED0B391905F8E600AED9EE /* SlyAccountCommunicator.m in Sources */,
 				AC37E37418F34EE300C586B7 /* ContactTableViewController.m in Sources */,
 				AC2665A118FA10F8002EB43A /* SlyDatabase.m in Sources */,
 				AC26663818FBB347002EB43A /* MessageCommunicator.m in Sources */,
@@ -383,6 +403,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				ACF288B918F4914F004E5C9E /* Alias.m in Sources */,
 				ACF2889418F4016A004E5C9E /* NewContactViewController.m in Sources */,
+				ACED0B3C1905F93E00AED9EE /* SlyAccountManager.m in Sources */,
 				AC009A7F18F6135C0028DDE1 /* UIBubbleTableViewCell.m in Sources */,
 				AC26659B18FA05ED002EB43A /* SlyAccountViewController.m in Sources */,
 				AC26659E18FA0834002EB43A /* SlyAccount.m in Sources */,
@@ -390,6 +411,7 @@
 				AC37E37718F3503B00C586B7 /* NewAliasViewController.m in Sources */,
 				AC37E37C18F3584600C586B7 /* AliasesViewController.m in Sources */,
 				AC009A7C18F6135C0028DDE1 /* NSBubbleData.m in Sources */,
+				ACED0B361905F4B700AED9EE /* slyAccountBuilder.m in Sources */,
 				AC26663518FBB2EB002EB43A /* MessageManager.m in Sources */,
 				AC009A7D18F6135C0028DDE1 /* UIBubbleHeaderTableViewCell.m in Sources */,
 				AC009A8518F617940028DDE1 /* SlychaterViewController.m in Sources */,

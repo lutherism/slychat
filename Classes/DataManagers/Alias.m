@@ -29,7 +29,7 @@
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
-    NSDate *date_created = [decoder decodeObjectForKey:kDateKey];
+    NSString *date_created = [decoder decodeObjectForKey:kDateKey];
     NSString *name = [decoder decodeObjectForKey:kNameKey];
     NSDictionary *settings = [decoder decodeObjectForKey:kSettingsKey];
     NSMutableArray *contacts = [decoder decodeObjectForKey:kContactsKey];
@@ -57,7 +57,7 @@
 - (id)initwithName:(NSString *)name sly:(SlyAccount *)sly{
     self = [super init];
     _name=[name copy];
-    _date_created = [[NSDate alloc]init];
+    _date_created = [[[NSDate alloc]init]description];
     _settings = [[NSDictionary alloc]init];
     _contacts = [[NSMutableArray alloc]init];
     _messages = [[NSMutableArray alloc]init];
@@ -66,7 +66,7 @@
 }
 
 
-- (id)initWithName:(NSString *)name date_created:(NSDate *)date_created settings:(NSDictionary *)settings contacts:(NSMutableArray *)contacts messages:(NSMutableArray *)messages sly:(SlyAccount *)sly
+- (id)initWithName:(NSString *)name date_created:(NSString *)date_created settings:(NSDictionary *)settings contacts:(NSMutableArray *)contacts messages:(NSMutableArray *)messages sly:(SlyAccount *)sly
 {
     self = [super init];
     _name = [name copy];
@@ -87,7 +87,7 @@
     if(_contacts)return _contacts;
     return nil;
 }
--(Contact *)getContactWithID:(NSNumber *)cid{
+-(Contact *)getContactWithID:(NSString *)cid{
     for(Contact *c in _contacts)
     {
         if([[c getChatID]isEqual:cid])return c;
@@ -108,13 +108,13 @@
 }
 
 -(void)addSlyContacts:(NSArray *)contacts{
+    if([_contacts count]<1)_contacts = [[NSMutableArray alloc]init];
     [_contacts addObjectsFromArray:contacts];
 }
 -(void)addMessages:(NSArray *)messages{
+    if([_messages count]<1)_messages = [[NSMutableArray alloc]init];
     [_messages addObjectsFromArray:messages];
-    for(Contact *c in _contacts){
-        [c addMessages:messages];
-    }
+
 }
 -(void)setSettings:(NSDictionary *)settings{
     settings = [_settings copy];

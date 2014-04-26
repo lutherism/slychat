@@ -19,17 +19,17 @@
 @interface Alias : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSDate * date_created;
+@property (nonatomic, retain) NSString * date_created;
 @property (nonatomic, retain) NSDictionary *settings;
 @property (nonatomic, retain) NSMutableArray *contacts;
 @property (nonatomic, retain) NSMutableArray *messages;
 @property (nonatomic, retain) SlyAccount *sly;
 
-- (id)initWithName:(NSString *)name date_created:(NSDate *)date_created settings:(NSDictionary *)settings contacts:(NSMutableArray *)contacts messages:(NSMutableArray *)messages sly:(SlyAccount *)sly;
+- (id)initWithName:(NSString *)name date_created:(NSString *)date_created settings:(NSDictionary *)settings contacts:(NSMutableArray *)contacts messages:(NSMutableArray *)messages sly:(SlyAccount *)sly;
 - (id)initwithName:(NSString *)name sly:(SlyAccount *)sly;
 
 -(NSString *)getName;
--(Contact *)getContactWithID:(NSNumber *)cid;
+-(Contact *)getContactWithID:(NSString *)cid;
 -(NSMutableArray *)getContacts;
 -(NSMutableArray *)getMessages;
 -(SlyAccount *)getAccount;

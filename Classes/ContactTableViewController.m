@@ -12,6 +12,7 @@
 #import "SlychaterViewController.h"
 #import "MessageTimer.h"
 #import "SlyAccount.h"
+#import "slychatAppDelegate.h"
 
 
 @interface ContactTableViewController ()
@@ -30,25 +31,21 @@
 }
 -(void)dealloc{
     [super dealloc];
-    [_messagChecker release];
 }
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue
+- (void)unwindToList:(UIStoryboardSegue *)segue
 {
     NewContactViewController *source = [segue sourceViewController];
     NSLog(@"load from new");
-    if (source.make_contact != nil) {
-        [_sly addSlyContacts:[NSArray arrayWithObject:source.make_contact]];
-        [self loadInitialData];
-        [self.contactList reloadData];
-    }
+    [self.contactList reloadData];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateView:) name:@"updateRoot" object:nil];
 
-    [self loadInitialData];
+    //[self loadInitialData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -56,14 +53,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     NSLog(@"check messages");
 }
--(void)checkRequests {
-    
-    
-}
 
-- (void)loadInitialData {
-    _contacts = [[NSMutableArray alloc]initWithArray:[_sly getContacts]];
-    NSLog(@"%@",[_contacts description]);
+- (void)updateView:(NSNotification *)notification {
+    NSLog(@"update view");
+    [self.contactList reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,13 +68,16 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
+    NSLog(@"load sections");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.contacts count];
+    NSLog(@"load rows");
+    NSLog(@"%@",[[[SlyDatabase loadSly]getContacts]description]);
+    return [[[SlyDatabase loadSly]getContacts]count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:
@@ -91,61 +87,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"load cell");
     static NSString *CellIdentifier = @"ContactCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    Contact *contacted = [self.contacts objectAtIndex:indexPath.row];
+    Contact *contacted = [[[SlyDatabase loadSly] getContacts] objectAtIndex:indexPath.row];
     cell.textLabel.text = contacted.partner;
-    cell.detailTextLabel.text = [contacted.alias getName];
+    NSLog(@"contacted for name %@",[[contacted getMyAlias]getName]);
+    cell.detailTextLabel.text = [[contacted getMyAlias]getName];
     return cell;
 }
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation
@@ -158,8 +108,7 @@
     if([segue.identifier isEqualToString:@"openchat"]){
         SlychaterViewController *controller = (SlychaterViewController *)segue.destinationViewController;
         //[controller release];
-        Contact *send_contact = [[_contacts objectAtIndex:[self.tableView indexPathForSelectedRow].row]copy];
-        controller.contact = send_contact;
+        controller.contactname = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]].textLabel.text;
     }
 }
 

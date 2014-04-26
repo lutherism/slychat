@@ -17,8 +17,7 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) UIStoryboard *mainStoryboard;
-@property (nonatomic, retain) SlyDatabase *mainData;
-@property (nonatomic, retain) MessageTimer *messageChecker;
+@property (nonatomic, retain) MessageTimer *messagetimer;
 
 @end
 

@@ -22,19 +22,21 @@
     
     NSMutableArray *msgs = [[NSMutableArray alloc]init];
     
-    NSArray *messages = [[parsedObject valueForKeyPath:@"chat"] valueForKeyPath:@"message"];
-    NSLog(@"Recieved %i messages.",[messages count]);
+    //NSArray *messages = [parsedObject ];
+    //NSLog(@"Recieved %i messages.",[messages count]);
     
-    for(NSDictionary *messageDic in messages) {
-        Message *msg = [[Message alloc]init];
-        
-        for(NSString *key in messageDic){
+    //for(NSDictionary *messageDic in messages) {
+        for(NSString *messagekey in parsedObject){
+            Message *msg = [[Message alloc]init];
+            for(NSString *key in [parsedObject objectForKey:messagekey]){
             if([msg respondsToSelector:NSSelectorFromString(key)]){
-                [msg setValue:[messageDic valueForKey:key] forKey:key];
+                [msg setValue:[[parsedObject objectForKey:messagekey]objectForKey:key] forKey:key];
             }
+            }
+           [msgs addObject:msg];
+            NSLog(@"recieved: %@",[msg getText]);
         }
-        [msgs addObject:msg];
-    }
+    //}
     return msgs;
 }
 

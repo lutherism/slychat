@@ -8,6 +8,7 @@
 
 #import "NewContactViewController.h"
 #import "Contact.h"
+#import "ContactTableViewController.h"
 
 
 @interface NewContactViewController ()
@@ -23,11 +24,10 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if (sender != self.doneButton) return;
-        if (inputContact.text.length > 0) {
-            self.make_contact = [[Contact alloc] initwithPartner:inputContact.text alias:selectedAlias chat_id:[NSNumber numberWithInteger:[parsing_id integerValue]] sly:_sly];
-        
+    if(sender == self.doneButton){
+        [self getNewContact];
     }
+
 }
 
 -(IBAction)makeConnection{
@@ -54,7 +54,6 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
-    [selectedAlias release];
     if([listAliases count]>0)selectedAlias = [listAliases objectAtIndex:row];
 }
 
@@ -70,8 +69,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _sly = [[UIApplication sharedApplication]delegate]
-    if([listAliases count]>0)selectedAlias =[listAliases objectAtIndex:0];
+    listAliases = [[NSMutableArray arrayWithArray:[[SlyDatabase loadSly]getAliases]]retain];
+    if([listAliases count]>0)selectedAlias = [listAliases objectAtIndex:0];
     [inputContact becomeFirstResponder];
     // Do any additional setup after loading the view.
     }
@@ -106,6 +105,10 @@
 //Server Request Data
 - (void)getNewContact {
     NSLog(@"Get Messages");
+    [connectingIndicator startAnimating];
+    inputContact.enabled = NO;
+    self.doneButton.enabled=NO;
+    [myAliases setUserInteractionEnabled:NO];
     NSString *url = [NSString stringWithFormat:
 					 @"http://slychat.openrobot.net/create.php?user=%@&target=%@",
 					 selectedAlias.getName, inputContact.text];
@@ -114,7 +117,6 @@
     NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
     [request setURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"POST"];
-	
     NSURLConnection *conn=[[NSURLConnection alloc] initWithRequest:request delegate:self];
     if (conn)
     {
@@ -143,50 +145,23 @@ didReceiveResponse:(NSURLResponse *)response
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSLog(@"Got Connection");
-    if (chatParser)
-        [chatParser release];
-	
-    if(receivedData)chatParser = [[NSXMLParser alloc] initWithData:receivedData];
-    else NSLog(@"error: connecitonDidFinishLoading var receivedData");
-    [chatParser setDelegate:self];
-    [chatParser parse];
-	
-    [receivedData release];
-}
-- (void)timerCallback {
-    NSLog(@"Timer callback");
-    [self getNewContact];
-}
-
-- (void)parser:(NSXMLParser *)parser
-didStartElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI
- qualifiedName:(NSString *)qName
-	attributes:(NSDictionary *)attributeDict {
-    if ( [elementName isEqualToString:@"id"] ) {
-            inID = YES;
-        NSLog(@"parsing");
-        parsing_id=[[NSMutableString alloc]init];
+    NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:receivedData options:0 error:nil];
+    for(NSString *key in parsedObject){
+        if([key isEqualToString:@"id"]){
+            NSLog(@"contact made: %@",key);
+            SlyAccount *sly = [SlyDatabase loadSly];
+            _make_contact = [[Contact alloc]initwithPartner:inputContact.text alias:[sly getAliasWithName:[selectedAlias getName]] chat_id:[parsedObject objectForKey:key] sly:sly];
+            [sly addSlyContacts:[NSArray arrayWithObject:_make_contact]];
+            [SlyDatabase save:sly];
+            [self performSegueWithIdentifier:@"createcontact" sender:self.doneButton];
+        }
+        else{
+            inputContact.text = @"";
+            self.doneButton.enabled=YES;
+        }
+        
     }
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    if ( inID ) {
-        [parsing_id appendString:string];
-    }
-
-}
-
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    if ( [elementName isEqualToString:@"id"] ) {
-        inID = NO;
-        NSLog(@"%@",parsing_id);
-        NSLog(@"done parsing");
-        NSLog(@"%@",chat_id);
-        [connectingIndicator stopAnimating];
-        [_doneButton setEnabled:TRUE];
-    }
+    [connectingIndicator stopAnimating];
 }
 
 @end

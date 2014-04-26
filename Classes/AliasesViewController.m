@@ -8,14 +8,13 @@
 
 #import "AliasesViewController.h"
 #import "Alias.h"
-#import "AliasDatabase.h"
 #import "NewAliasViewController.h"
-#import "checkForRequests.h"
+#import "slychatAppDelegate.h"
+#import "SlyAccount.h"
 
 
 @interface AliasesViewController ()
 
-@property (nonatomic,retain) AliasDatabase *database;
 
 @end
 
@@ -35,7 +34,7 @@
 {
     NewAliasViewController *source = [segue sourceViewController];
     if (source.make_alias != nil) {
-        [AliasDatabase save:source.make_alias];
+        //[AliasDatabase save:source.make_alias];
         [self loadInitialData];
         [self.tableView reloadData];
     }
@@ -59,8 +58,10 @@
 }
 
 - (void)loadInitialData {
+    _sly = [SlyDatabase loadSly];
+    _aliases = [[NSMutableArray alloc]initWithArray:[_sly getAliases]];
     NSLog(@"Load Data");
-    self.aliases =[[NSMutableArray alloc]initWithArray:[AliasDatabase loadAliases]];
+    //self.aliases =[[NSMutableArray alloc]initWithArray:[AliasDatabase loadAliases]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,7 +88,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.aliases count];
+    return [[[SlyDatabase loadSly] getAliases] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:
@@ -100,7 +101,7 @@
     static NSString *CellIdentifier = @"AliasCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath ];
     NSLog(@"make cell");
-    cell.textLabel.text = [[_aliases objectAtIndex:indexPath.row] getName];
+    cell.textLabel.text = [[[[SlyDatabase loadSly] getAliases] objectAtIndex:indexPath.row] getName];
     return cell;
 }
 
@@ -109,10 +110,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if([segue.identifier isEqualToString:@"checkRequests"]){
-        checkForRequests *controller = (checkForRequests *)segue.destinationViewController;
         //[controller release];
         Alias *send_alias = [[_aliases objectAtIndex:[self.tableView indexPathForSelectedRow].row]copy];
-        controller.checkThis = send_alias;
     }
 }
 

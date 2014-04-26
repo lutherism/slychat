@@ -19,24 +19,29 @@
 
 @interface Message : NSObject <NSCopying, NSCoding>
 
-@property (nonatomic, retain) NSString * text;
-@property (nonatomic, retain) NSDate * date_sent;
-@property (nonatomic, retain) NSNumber * isMedia;
-@property (nonatomic, retain) NSString * mediaURL;
+@property (nonatomic, retain) NSString * message;
+@property (nonatomic, retain) NSString * date_sent;
+@property (nonatomic, retain) NSString * ismedia;
+@property (nonatomic, retain) NSString * medialink;
 @property (nonatomic, retain) SlyAccount* sly;
 @property (nonatomic, retain) Contact *contact;
 @property (nonatomic, retain) Alias *alias;
-@property (nonatomic, retain) NSNumber * mid;
+@property (nonatomic, retain) NSString *mid;
+@property (nonatomic, retain) NSString *cid;
+@property (nonatomic, retain) NSString *sender;
 
--(id)initwithText:(NSString *)message mid:(NSNumber *)mid contact:(Contact *)contact sly:(SlyAccount *)sly alias:(Alias *)alias;
--(id)initwithText:(NSString *)message mid:(NSNumber *)mid contact:(Contact *)contact mediaURL:(NSString *)mediaurl sly:(SlyAccount *)sly alias:(Alias *)alias;
--(id)initwithText:(NSString *)message mid:(NSNumber *)mid contact:(Contact *)contact mediaURL:(NSString *)mediaurl date:(NSDate *)date_sent isMedia:(NSNumber *)ismedia sly:(SlyAccount *)sly alias:(Alias *)alias;
+
+-(id)initwithText:(NSString *)message mid:(NSString *)mid contact:(Contact *)contact sender:(NSString *)sender cid:(NSString *)cid sly:(SlyAccount *)sly alias:(Alias *)alias;
+-(id)initwithText:(NSString *)message mid:(NSString *)mid contact:(Contact *)contact mediaURL:(NSString *)mediaurl sender:(NSString *)sender cid:(NSString *)cid sly:(SlyAccount *)sly alias:(Alias *)alias;
+-(id)initwithText:(NSString *)message mid:(NSString *)mid contact:(Contact *)contact mediaURL:(NSString *)mediaurl date:(NSString *)date_sent isMedia:(NSString *)ismedia sender:(NSString *)sender cid:(NSString *)cid sly:(SlyAccount *)sly alias:(Alias *)alias;
 
 -(NSString *)getText;
 -(Contact *)getContact;
--(NSNumber *)getMessageID;
+-(NSString *)getMessageID;
 -(NSString *)getMedia;
--(NSDate *)getDateSent;
+-(NSString *)getDateSent;
 -(SlyAccount *)getSly;
+-(NSString *)getSender;
+-(NSString *)getChatID;
 
 @end

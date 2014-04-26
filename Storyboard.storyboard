@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U6e-IR-NVT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U6e-IR-NVT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -74,7 +74,7 @@
                         <barButtonItem key="backBarButtonItem" title="Contacts" id="tmg-8D-VgP"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="C4R-CO-uT1">
                             <connections>
-                                <segue destination="KYf-Hz-9ly" kind="push" id="zcE-w0-Tu9"/>
+                                <segue destination="KYf-Hz-9ly" kind="push" identifier="createcontact" id="zcE-w0-Tu9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,30 +123,19 @@
                                 <rect key="frame" x="280" y="76" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRx-uJ-xqB">
-                                <rect key="frame" x="241" y="143" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Connect">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="makeConnection" destination="4kh-id-Ev4" eventType="touchUpInside" id="hDo-jB-SlW"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Contact" id="ije-dy-Fxc">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="AC1-SR-WO4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AC1-SR-WO4">
                             <connections>
-                                <segue destination="PNa-KV-Vzz" kind="unwind" unwindAction="unwindToList:" id="KKy-SK-2Ig"/>
+                                <action selector="makeConnection" destination="4kh-id-Ev4" id="fM3-rp-G2J"/>
+                                <segue destination="PNa-KV-Vzz" kind="unwind" unwindAction="unwindToList:" id="Jav-Pj-DoY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="connectButton" destination="tRx-uJ-xqB" id="gXQ-oX-SDI"/>
                         <outlet property="connectingIndicator" destination="0ZI-xI-AST" id="x65-p8-ISm"/>
-                        <outlet property="doneButton" destination="AC1-SR-WO4" id="0RG-3h-HDj"/>
                         <outlet property="inputContact" destination="nat-2b-VZK" id="ylq-f9-AvY"/>
                         <outlet property="myAliases" destination="I1F-17-hed" id="RA6-f3-JEU"/>
                     </connections>
@@ -255,7 +244,7 @@
                         <outlet property="accountEditField" destination="vjA-Nz-OFb" id="Ff4-yj-gNx"/>
                         <outlet property="aliasIndicator" destination="qp0-Dr-lW8" id="HrT-lF-Xw5"/>
                         <outlet property="passwordEditField" destination="dx0-bm-gAY" id="qLY-Ta-gjE"/>
-                        <segue destination="U6e-IR-NVT" kind="push" identifier="login" id="0Jm-94-TCB"/>
+                        <segue destination="U6e-IR-NVT" kind="modal" identifier="login" modalTransitionStyle="flipHorizontal" id="0Jm-94-TCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6a-7x-mMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

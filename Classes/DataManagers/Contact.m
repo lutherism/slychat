@@ -22,17 +22,18 @@
 
 - (void) encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:_partner forKey:kNameKey];
-    [encoder encodeObject:_date_connected forKey:kDateKey];
-    [encoder encodeObject:_chat_id forKey:kChatKey];
+    [encoder encodeObject:_date forKey:kDateKey];
+    [encoder encodeObject:_cid forKey:kChatKey];
     [encoder encodeObject:_alias forKey:kAliasKey];
+    [encoder encodeObject:_messages forKey:kMessagesKey];
     [encoder encodeObject:_sly forKey:kSlyKey];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
-    NSDate *date_created = [decoder decodeObjectForKey:kDateKey];
+    NSString *date_created = [decoder decodeObjectForKey:kDateKey];
     NSString *partner = [decoder decodeObjectForKey:kNameKey];
     Alias *alias = [decoder decodeObjectForKey:kAliasKey];
-    NSNumber *chat = [decoder decodeObjectForKey:kChatKey];
+    NSString *chat = [decoder decodeObjectForKey:kChatKey];
     NSMutableArray *messages = [decoder decodeObjectForKey:kMessagesKey];
     SlyAccount *sly = [decoder decodeObjectForKey:kSlyKey];
     return [self initwithPartner:partner alias:alias date_connected:date_created chat_id:chat messages:messages sly:sly];
@@ -40,8 +41,8 @@
 
 -(void)dealloc{
     [_partner release];
-    [_chat_id release];
-    [_date_connected release];
+    [_cid release];
+    [_date release];
     [_alias release];
     [_sly release];
     [_messages release];
@@ -50,26 +51,26 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    Contact *copy = [[[self class] allocWithZone: zone] initwithPartner:_partner alias:_alias date_connected:_date_connected chat_id:_chat_id messages:_messages sly:_sly];
+    Contact *copy = [[[self class] allocWithZone: zone] initwithPartner:_partner alias:_alias date_connected:_date chat_id:_cid messages:_messages sly:_sly];
     return copy;
 }
 
-- (id)initwithPartner:(NSString *)partner alias:(Alias *)alias date_connected:(NSDate *)date_created chat_id:(NSNumber *)chat_id messages:(NSMutableArray *)messages sly:(SlyAccount *)sly{
+- (id)initwithPartner:(NSString *)partner alias:(Alias *)alias date_connected:(NSString *)date_created chat_id:(NSString *)chat_id messages:(NSMutableArray *)messages sly:(SlyAccount *)sly{
     self = [super init];
     _alias=[alias copy];
     _partner=[partner copy];
-    _date_connected = [date_created copy];
-    _chat_id = [chat_id copy];
+    _date = [date_created copy];
+    _cid = [chat_id copy];
     _messages = [messages copy];
     return self;
 }
 
-- (id)initwithPartner:(NSString *)partner alias:(Alias *)alias chat_id:(NSNumber *)chat_id sly:(SlyAccount *)sly{
+- (id)initwithPartner:(NSString *)partner alias:(Alias *)alias chat_id:(NSString *)chat_id sly:(SlyAccount *)sly{
     self = [super init];
     _alias=[alias copy];
     _partner=[partner copy];
-    _date_connected = [[NSDate alloc]init];
-    _chat_id = [chat_id copy];
+    _date = [[[NSDate alloc]init]description];
+    _cid = [chat_id copy];
     _messages = [[NSMutableArray alloc]init];
     return self;
 }
@@ -84,16 +85,16 @@
     return nil;
 }
 
--(NSNumber *)getChatID{
-    if(_chat_id)return _chat_id;
+-(NSString *)getChatID{
+    if(_cid)return _cid;
     return nil;
 }
 -(NSMutableArray *)getMessages{
     if(_messages)return _messages;
     return nil;
 }
-
 -(void)addMessages:(NSArray *)msgs{
+    if([_messages count]<1)_messages = [[NSMutableArray alloc]init];
     [_messages addObjectsFromArray:msgs];
 }
 -(Message *)getMessageByID:(NSNumber *)mid{

@@ -12,12 +12,12 @@
 
 @implementation MessageManager
 
--(void)fetchMessagesForConv:(NSString *)coordinate
+-(void)fetchMessageSinceID:(NSNumber *)coordinate withSly:(SlyAccount *)sly
 {
-    [self.communicator getMessagesForContact:coordinate];
+    [self.communicator getMessagesSinceID:coordinate withSly:sly];
 }
 
--(void)receivedMessageJSON:(NSData *)messageNotation
+-(void)receivedMessagesJSON:(NSData *)messageNotation
 {
     NSError *error = nil;
     NSArray *messages = [MessageBuilder messagesFromJSON:messageNotation error:&error];
